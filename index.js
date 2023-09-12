@@ -1,6 +1,8 @@
 
 import express, { json } from "express";
+import {AbortController} from "node-abort-controller";
 
+global.AbortController = AbortController;
 
 const app = express();
 app.use(json());
